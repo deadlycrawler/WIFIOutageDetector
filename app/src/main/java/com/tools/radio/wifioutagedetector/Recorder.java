@@ -9,7 +9,10 @@ import org.apache.http.params.HttpParams;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+
+import static android.view.View.Z;
 
 public class Recorder {
 
@@ -20,17 +23,25 @@ public class Recorder {
     private boolean recorderActive = false;
 
 
-    public void start() {
+    public boolean start() {
 
         while (this.recorderActive == true) {
             //need to periodicly ping and record
+            return ping();
 
         }
+        return true;
     }
 
     public void stop() {
 
         recorderActive = false;
+    }
+
+    public boolean ping(){
+
+        //placeholder
+        return true;
     }
 
 }
