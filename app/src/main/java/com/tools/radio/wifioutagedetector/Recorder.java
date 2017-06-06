@@ -12,6 +12,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Recorder {
+
+    public Recorder(){
+
+
+    }
     private boolean recorderActive = false;
 
 

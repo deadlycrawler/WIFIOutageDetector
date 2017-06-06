@@ -13,11 +13,13 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/delay"
             android:inputType="number|numberSigned"
             android:hint="time between pings as a whole number"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/ssid"
             android:hint="enter BSSID"/>
         <TextView
             android:layout_width="wrap_content"
