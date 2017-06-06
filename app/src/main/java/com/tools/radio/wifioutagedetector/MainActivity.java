@@ -23,25 +23,31 @@ public class MainActivity extends AppCompatActivity {
         final TextView record = (TextView) findViewById(R.id.ToggleRecordButton);
 
 
-        record.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
+        record.setOnClickListener(new View.OnClickListener() {
 
-                if (mStartButtonTogleStage==true){
+            Recorder rc = new Recorder();
+
+
+            @Override
+            public void onClick(View view) {
+
+                if (mStartButtonTogleStage == true) {
                     record.setText("recording...");
                     record.setBackgroundColor(Color.RED);
-                    mStartButtonTogleStage=false;
+                    mStartButtonTogleStage = false;
+                    rc.start();
 
-                }else{
+                } else {
                     record.setText("recording stoped");
                     record.setBackgroundColor(Color.CYAN);
-                    mStartButtonTogleStage=true;}
+                    mStartButtonTogleStage = true;
+                    rc.stop();
+                }
 
 
             }
 
         });
-
 
 
     }
